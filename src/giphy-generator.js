@@ -1,5 +1,5 @@
 const core = require('@actions/core');
-const { GitHub, context } = require('@actions/github');
+const {GitHub, context} = require('@actions/github');
 const axios = require('axios').default;
 
 async function run() {
@@ -8,12 +8,12 @@ async function run() {
     const github = new GitHub(process.env.GITHUB_TOKEN);
 
     // Get owner and repo from context of payload that triggered the action
-    const { owner, repo } = context.repo;
+    const {owner, repo} = context.repo;
 
     // Get the inputs from the workflow file: https://github.com/actions/toolkit/tree/master/packages/core#inputsoutputs
     const limit = 25;
-    const rating = core.getInput('rating', { required: false });
-    const lang = core.getInput('lang', { required: false });
+    const rating = core.getInput('rating', {required: false});
+    const lang = core.getInput('lang', {required: false});
 
     // Query GIPHY for a GIF!
     // API Documentation: https://developers.giphy.com/docs/api/endpoint/#search
@@ -32,7 +32,7 @@ async function run() {
     const {
       title: gifTitle,
       images: {
-        original: { url: gifUrl }
+        original: {url: gifUrl}
       }
     } = searchForGifResponse.data.data[gifIndex];
 
@@ -45,10 +45,8 @@ async function run() {
       repo,
       issue_number: commentNumber,
       body: `![${gifTitle}](${gifUrl})`
-        });
-        core.debug(`Successfully created comment on #: ${commentNumber} and gifTitle: ${gifTitle} - ${gifUrl}`);
-      }
-    }
+    });
+    core.debug(`Successfully created comment on #: ${commentNumber} and gifTitle: ${gifTitle} - ${gifUrl}`);
   } catch (error) {
     core.setFailed(error.message);
   }
