@@ -1,4 +1,4 @@
-# GIPHY Generator - GitHub Action
+# GIPHY Generator - GitHub Action!
 A GitHub Action (written in JavaScript) to generate a comment on issues and PRs, responding to the command `/giphy <search_term>`, leveraging the [GIPHY API](https://developers.giphy.com/docs/api/endpoint/#search). Powered by GIPHY and GitHub Actions!
 
 For example, if I commnented on an Issue and included the phrase `/giphy another one`, I would see a comment from this action of a gif response from [GIPHY's Search API](https://developers.giphy.com/docs/api/endpoint/#search) for `another one`:
