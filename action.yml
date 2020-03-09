@@ -1,0 +1,18 @@
+name: 'GIPHY Generator'
+description: 'Adds a GIF powered by GIPHY to Issues and PRs when the phrase `/giphy <search_term>` is found'
+author: 'IAmHughes'
+inputs:
+  rating:
+    description: 'The content rating used to filter results from the GIF search. Default: `g`'
+    required: false
+    default: 'g' # Other options documented in the GIPHY API docs: https://developers.giphy.com/docs/optional-settings#rating
+  lang:
+    description: 'The default language that the search query is in. Default: `en` for English'
+    required: false
+    default: 'en' # Other options documented in the GIPHY API docs: https://developers.giphy.com/docs/optional-settings#language-support
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+branding:
+  icon: 'gift'
+  color: 'red'
