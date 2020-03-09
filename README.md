@@ -1,7 +1,7 @@
 # GIPHY Generator - GitHub Action
 A GitHub Action (written in JavaScript) to generate a comment on issues and PRs, responding to the command `/giphy <search_term>`, leveraging the [GIPHY API](https://developers.giphy.com/docs/api/endpoint/#search). Powered by GIPHY and GitHub Actions!
 
-![/giphy motivation](https://media1.giphy.com/media/ACcXRXwUqJ6Ok/giphy.gif?cid=790b76114c50f8d3fd545233a84bf5409ed102e90ff8e9e8&rid=giphy.gif) ![/giphy another one](https://media.giphy.com/media/xThuWcZzGnonnG3ayQ/giphy.gif)
+![/giphy another one](https://media.giphy.com/media/xThuWcZzGnonnG3ayQ/giphy.gif)
 
 ## Usage
 ### Pre-requisites
@@ -46,8 +46,12 @@ jobs:
 ## Contributing
 I would love for you to contribute, pull requests are welcome! Please see the [CONTRIBUTING.md](CONTRIBUTING.md) for more information.
 
+![/giphy motivation](https://media1.giphy.com/media/ACcXRXwUqJ6Ok/giphy.gif?cid=790b76114c50f8d3fd545233a84bf5409ed102e90ff8e9e8&rid=giphy.gif)
+
 ## License
 The scripts and documentation in this project are released under the [GNU License](LICENSE)
 
 ## Disclaimer
 This leverages the [GIPHY API](https://developers.giphy.com/docs/api/endpoint#search) to query results based on inputs you provide and the rating you use. As a consumer of this action, you accept responsibility of any gifs that are posted by this bot. The owner of this action does not control the search algorithm or endpoint that is returning images and is not responsible for it's content.
+
+![/giphy challenge accepted](https://media.giphy.com/media/d4zHnLjdy48Cc/giphy.gif)
