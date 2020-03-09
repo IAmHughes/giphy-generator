@@ -14,5 +14,5 @@ runs:
   using: 'node12'
   main: 'dist/index.js'
 branding:
-  icon: 'gift'
+  icon: 'gift' # Icon picked from Feather icons: https://feathericons.com/
   color: 'red'
