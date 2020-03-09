@@ -36,7 +36,7 @@ jobs:
     steps:
       - name: GIPHY Generator
         id: giphy_generator
-        uses: iamhughes/giphy_generator@v1
+        uses: iamhughes/giphy-generator@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
           GIPHY_TOKEN: ${{ secrets.GIPHY_TOKEN }} # This token should be created on giphy.com: https://developers.giphy.com/dashboard/?create=true

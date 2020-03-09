@@ -7,7 +7,7 @@ async function run() {
     // Get authenticated GitHub client (Ocktokit): https://github.com/actions/toolkit/tree/master/packages/github#usage
     const github = new GitHub(process.env.GITHUB_TOKEN);
 
-    core.debug(`context: ${context}`);
+    core.debug(`context: ${JSON.stringify(context)}`);
 
     // Get owner, repo, and event from context of payload that triggered the action
     const {owner, repo} = context.repo;
