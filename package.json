@@ -1,0 +1,40 @@
+{
+  "name": "giphy-generator",
+  "version": "1.0.0",
+  "description": "Allow gifs from GIPHY",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "eslint 'src/**.js' --fix",
+    "test": "eslint 'src/**.js'",
+    "build": "ncc build src/main.js",
+    "precommit": "npm run build && git add dist/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamhughes/motivate-me"
+  },
+  "keywords": [
+    "actions",
+    "node"
+  ],
+  "author": "IAmHughes",
+  "license": "GNU",
+  "dependencies": {
+    "@actions/core": "^1.0.0",
+    "@actions/exec": "^1.0.0",
+    "@actions/github": "^1.0.0",
+    "axios": "^0.19.1"
+  },
+  "devDependencies": {
+    "@zeit/ncc": "^0.20.4",
+    "eslint": "^5.13.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.6.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^2.7.0",
+    "eslint-plugin-react": "^7.12.4",
+    "prettier": "^1.16.4",
+    "husky": "^3.0.5"
+  }
+}
