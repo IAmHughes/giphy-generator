@@ -13991,13 +13991,15 @@ async function run() {
     // Get authenticated GitHub client (Ocktokit): https://github.com/actions/toolkit/tree/master/packages/github#usage
     const github = new GitHub(process.env.GITHUB_TOKEN);
 
-    // Get owner and repo from context of payload that triggered the action
+    core.debug(`context: ${context}`);
+
+    // Get owner, repo, and event from context of payload that triggered the action
     const {owner, repo} = context.repo;
 
     // Get the inputs from the workflow file: https://github.com/actions/toolkit/tree/master/packages/core#inputsoutputs
-    const limit = 25;
     const rating = core.getInput('rating', {required: false});
     const lang = core.getInput('lang', {required: false});
+    const limit = 25;
 
     // Query GIPHY for a GIF!
     // API Documentation: https://developers.giphy.com/docs/api/endpoint/#search
