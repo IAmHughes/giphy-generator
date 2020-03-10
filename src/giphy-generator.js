@@ -20,9 +20,7 @@ async function run() {
     let issue_pr_number;
     let body;
 
-    // Parse body of issue or PR to look for `/giphy <search_term>`
-    core.debug(`Context for ${event_type}\n\n${JSON.stringify(context)} event`);
-
+    // Parse body of issue or PR to look for `/giphy <search_term>` based on event type
     // Pull request event
     // Webhook Documentation: https://developer.github.com/v3/activity/events/types/#pullrequestevent
     if (event_type === 'pull_request') {
