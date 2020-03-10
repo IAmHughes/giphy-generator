@@ -13998,21 +13998,23 @@ async function run() {
     let body;
 
     // Parse body of issue or PR to look for `/giphy <search_term>`
+    core.debug(`Context for ${event_type}\n\n${JSON.stringify(context)}`);
+
     if (event_type === 'pull_request') {
       issue_pr_number = context.number;
       body = context.number.body;
 
-      core.debug(`Pull request triggered action, issue_pr_number: ${issue_pr_number}, body: ${body}`)
+      core.debug(`${event_type} triggered action, issue_pr_number: ${issue_pr_number}, body: ${body}`)
     } else if (event_type === 'issues') {
       issue_pr_number = context.issue.number;
       body = context.issue.body;
 
-      core.debug(`Issue triggered action, issue_pr_number: ${issue_pr_number}, body: ${body}`)
+      core.debug(`${event_type}  triggered action, issue_pr_number: ${issue_pr_number}, body: ${body}`)
     } else {
       issue_pr_number = context.issue.number;
       body = context.comment.body;
 
-      core.debug(`Issue comment triggered action, issue_pr_number: ${issue_pr_number}, body: ${body}`)
+      core.debug(`${event_type}  triggered action, issue_pr_number: ${issue_pr_number}, body: ${body}`)
     }
 
     // Get the inputs from the workflow file: https://github.com/actions/toolkit/tree/master/packages/core#inputsoutputs
