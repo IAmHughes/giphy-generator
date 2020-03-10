@@ -85,7 +85,7 @@ async function run() {
         issue_number: issue_pr_number,
         body: `![${gifTitle}](${gifUrl})`
       });
-      core.debug(`Successfully created comment on #: ${issue_pr_number} and gifTitle: ${gifTitle} - ${gifUrl}`);
+      core.debug(`Successfully created comment on #: ${issue_pr_number} with gifTitle: ${gifTitle} - ${gifUrl}`);
     } else {
       core.debug(`/giphy command not found in body: ${body}, exiting`);
     }
