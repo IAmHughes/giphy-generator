@@ -14005,7 +14005,7 @@ async function run() {
     let body;
 
     // Parse body of issue or PR to look for `/giphy <search_term>`
-    core.debug(`Context for ${event_type}\n\n${JSON.stringify(context)}`);
+    core.debug(`Context for ${event_type}\n\n${JSON.stringify(context)} event`);
 
     // Pull request event
     // Webhook Documentation: https://developer.github.com/v3/activity/events/types/#pullrequestevent
@@ -14013,7 +14013,7 @@ async function run() {
       issue_pr_number = context.payload.pull_request.number;
       body = context.payload.pull_request.body;
 
-      core.debug(`${event_type} triggered action, issue_pr_number: ${issue_pr_number}, body: ${body}`)
+      core.debug(`${event_type} event triggered action, issue_pr_number: ${issue_pr_number}, body: ${body}`)
       // Issues event
       // Webhook Documentation: https://developer.github.com/v3/activity/events/types/#issuesevent
     } else if (event_type === 'issues') {
@@ -14021,7 +14021,7 @@ async function run() {
       issue_pr_number = context.payload.issue.number;
       body = context.payload.issue.body;
 
-      core.debug(`${event_type}  triggered action, issue_pr_number: ${issue_pr_number}, body: ${body}`)
+      core.debug(`${event_type} event triggered action, issue_pr_number: ${issue_pr_number}, body: ${body}`)
       // Issue comment event
       // Webhook Documentation: https://developer.github.com/v3/activity/events/types/#issuecommentevent
     } else {
@@ -14030,7 +14030,7 @@ async function run() {
       issue_pr_number = context.payload.issue.number;
       body = context.payload.comment.body;
 
-      core.debug(`${event_type}  triggered action, issue_pr_number: ${issue_pr_number}, body: ${body}`)
+      core.debug(`${event_type} event triggered action, issue_pr_number: ${issue_pr_number}, body: ${body}`)
     }
 
     if (body.includes(command)) {
