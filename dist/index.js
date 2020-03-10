@@ -14003,9 +14003,9 @@ async function run() {
     // Pull request event
     // Webhook Documentation: https://developer.github.com/v3/activity/events/types/#pullrequestevent
     if (event_type === 'pull_request') {
-      core.debug(`context.number = ${context.number}`);
-      issue_pr_number = context.number;
-      body = context.number.body;
+      core.debug(`context.number = ${context.pull_request.number}`);
+      issue_pr_number = context.pull_request.number;
+      body = context.pull_request.body;
 
       core.debug(`${event_type} triggered action, issue_pr_number: ${issue_pr_number}, body: ${body}`)
       // Issues event
