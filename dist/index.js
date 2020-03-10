@@ -14001,16 +14001,20 @@ async function run() {
     core.debug(`Context for ${event_type}\n\n${JSON.stringify(context)}`);
 
     if (event_type === 'pull_request') {
+      core.debug(`context.number = ${context.number}`);
       issue_pr_number = context.number;
       body = context.number.body;
 
       core.debug(`${event_type} triggered action, issue_pr_number: ${issue_pr_number}, body: ${body}`)
     } else if (event_type === 'issues') {
+      core.debug(`context.issue = ${context.issue}`);
       issue_pr_number = context.issue.number;
       body = context.issue.body;
 
       core.debug(`${event_type}  triggered action, issue_pr_number: ${issue_pr_number}, body: ${body}`)
     } else {
+      core.debug(`context.issue = ${context.issue}`);
+      core.debug(`context.comment = ${context.comment}`);
       issue_pr_number = context.issue.number;
       body = context.comment.body;
 
