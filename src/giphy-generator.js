@@ -14,6 +14,7 @@ async function run() {
     const rating = core.getInput('rating', {required: false});
     const lang = core.getInput('lang', {required: false});
     const limit = 25;
+    const command = '/giphy';
 
     const event_type = context.eventName;
     let issue_pr_number;
@@ -48,9 +49,9 @@ async function run() {
       core.debug(`${event_type}  triggered action, issue_pr_number: ${issue_pr_number}, body: ${body}`)
     }
 
-    if (body.includes('/giphy')) {
-      const index = body.lastIndexOf('/giphy');
-      const query = body.substring(index + 1).trim();
+    if (body.includes(command)) {
+      const index = body.lastIndexOf(command);
+      const query = body.substring(index + command.length).trim();
       core.debug(`/giphy command found, query = ${query}`);
 
       // Query GIPHY for a GIF!
@@ -81,10 +82,10 @@ async function run() {
       await github.issues.createComment({
         owner,
         repo,
-        issue_number: commentNumber,
+        issue_number: issue_pr_number,
         body: `![${gifTitle}](${gifUrl})`
       });
-      core.debug(`Successfully created comment on #: ${commentNumber} and gifTitle: ${gifTitle} - ${gifUrl}`);
+      core.debug(`Successfully created comment on #: ${issue_pr_number} and gifTitle: ${gifTitle} - ${gifUrl}`);
     } else {
       core.debug(`/giphy command not found in body: ${body}, exiting`);
     }
