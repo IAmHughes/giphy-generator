@@ -1,4 +1,4 @@
-## Contributing
+## Contributing. 
 
 [fork]: https://github.com/iamhughes/giphy-generator/fork
 [pr]: https://github.com/iamhughes/giphy-generator/compare
