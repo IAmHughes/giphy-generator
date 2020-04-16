@@ -78,7 +78,7 @@ async function run() {
         owner,
         repo,
         issue_number: issue_pr_number,
-        body: `![${gifTitle}](${gifUrl})`
+        body: `![${gifTitle}](${gifUrl})\n\nPowered by GIPHY`
       });
       core.debug(`Successfully created comment on #: ${issue_pr_number} with gifTitle: ${gifTitle} - ${gifUrl}`);
     } else {
