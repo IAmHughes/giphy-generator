@@ -51,7 +51,7 @@ I would love for you to contribute, pull requests are welcome! Please see the [C
 ![/giphy motivation](https://media1.giphy.com/media/ACcXRXwUqJ6Ok/giphy.gif?cid=790b76114c50f8d3fd545233a84bf5409ed102e90ff8e9e8&rid=giphy.gif)
 
 ## License
-The scripts and documentation in this project are released under the [GNU License](LICENSE)
+The code and documentation in this project are released under the [GNU License](LICENSE)
 
 ## Disclaimer
 This leverages the [GIPHY API](https://developers.giphy.com/docs/api/endpoint#search) to query results based on inputs you provide and the rating you use. As a consumer of this action, you accept responsibility of any gifs that are posted by this bot. The owner of this action does not control the search algorithm or endpoint that is returning images and is not responsible for it's content.
