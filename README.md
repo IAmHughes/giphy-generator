@@ -5,6 +5,7 @@ For example, if you commented on an Issue and included the phrase `/giphy anothe
 
 ![/giphy another one](https://media.giphy.com/media/xThuWcZzGnonnG3ayQ/giphy.gif)
 
+
 ## Usage
 ### Pre-requisites
 Create a workflow `.yml` file in your `.github/workflows` directory. An [example workflow](#example-workflow---giphy-generator) is available below. For more information, reference the GitHub Help Documentation for [Creating a workflow file](https://help.github.com/en/articles/configuring-a-workflow#creating-a-workflow-file).
