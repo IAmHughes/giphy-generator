@@ -5,6 +5,7 @@ For example, if you commented on an Issue and included the phrase `/giphy anothe
 
 ![/giphy another one](https://media.giphy.com/media/xThuWcZzGnonnG3ayQ/giphy.gif)
 
+This repo isn't actively maintained, and may contain bugs. PRs welcome, though this was a fun PoC project.
 
 ## Usage
 ### Pre-requisites
