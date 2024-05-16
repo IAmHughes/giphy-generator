@@ -9,7 +9,7 @@ This repo isn't actively maintained, and may contain bugs. PRs welcome, though t
 
 ## Usage
 ### Pre-requisites
-Create a workflow `.yml` file in your `.github/workflows` directory. An [example workflow](#example-workflow---giphy-generator) is available below. For more information, reference the GitHub Help Documentation for [Creating a workflow file](https://help.github.com/en/articles/configuring-a-workflow#creating-a-workflow-file).
+Creates a workflow `.yml` file in your `.github/workflows` directory. An [example workflow](#example-workflow---giphy-generator) is available below. For more information, reference the GitHub Help Documentation for [Creating a workflow file](https://help.github.com/en/articles/configuring-a-workflow#creating-a-workflow-file).
 
 ### Inputs
 For more information on these inputs, see the [GIPHY API Documentation](https://developers.giphy.com/docs/api/endpoint/#search).
